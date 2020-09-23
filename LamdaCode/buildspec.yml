@@ -1,7 +1,8 @@
 version: 0.1
 phases:
-  install:
+  build:
      commands:
+         - git clone https://github.com/Sivadevsecops/CICDAWS.git
          - aws cloudformation package --template-file samTemplate.yaml  --s3-bucket pdpmalaths-lambda-pipeline  --output-template-file outputSamTemplate.yaml
 artifacts:
    type: zip
